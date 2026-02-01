@@ -46,6 +46,7 @@ impl fmt::Display for ToAlternateScreen {
 ///
 /// This is achieved by switching the terminal to the alternate screen on creation and
 /// automatically switching it back to the original screen on drop.
+#[derive(Debug)]
 pub struct AlternateScreen<W: Write> {
     /// The output target.
     output: W,
